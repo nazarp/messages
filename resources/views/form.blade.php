@@ -30,6 +30,12 @@
                     <textarea type="text" id="form8" class="md-textarea" maxlength="255" required></textarea>
                     <label for="form8">Message text</label>
                 </div>
+                
+                <div class="md-form">
+                    <i class="fa fa-lock prefix"></i>
+                    <input type="password" id="form3" class="form-control" required>
+                    <label for="form3">Your password</label>
+                </div>
             
                 <div class="text-center">
                     <button class="btn btn-default">Submit</button>

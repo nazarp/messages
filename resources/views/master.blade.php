@@ -100,6 +100,9 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="/js/mdb.min.js"></script>
 
+    <!-- Stanford Javascript Crypto Library -->
+    <script type="text/javascript" src="/js/sjcl.js"></script>
+
     <!-- Custom JavaScript -->
     <script type="text/javascript" src="/js/main.js"></script>
 

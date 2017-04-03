@@ -6,10 +6,22 @@
         form.show();
         form.find('input[type=reset]').click();
     });
+    $(document).on('click', '#showMessage', function(e){
+        e.preventDefault();
+        var password = $('#form3').val();
+        try {
+            var message = sjcl.decrypt(password, cryptedMessage);
+            $('#viewMessage').html('<p class="col-6">' + message + '</p>');
+        } catch (e) {
+            alert(e);
+        }
+    });
     $(document).on('submit', '#form', function(e){
         e.preventDefault();
         var method = $('#form input[type=radio]:checked').val();
         var message = $('form textarea').val();
+        var password = $('#form3').val();
+        message = sjcl.encrypt(password, message)
         $.post(
             'api/message/create'
             ,{
